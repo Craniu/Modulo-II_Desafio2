@@ -1,0 +1,53 @@
+
+header {
+    grid-area: header;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+header ul{
+    border: solid red 1px;
+    display: flex;
+}
+header li{
+    margin: 0px 20px ;
+
+}
+
+sidebar {
+    grid-area: sidebar;
+    height: 90vh;
+}
+
+main {
+    grid-area: main;
+    height: 90vh;
+}
+
+footer {
+    grid-area: footer;
+    height: 30px;
+}
+
+
+
+.grid-container {
+    display: grid;
+    height: 100hv;
+    grid-template-columns: 20% 1fr;
+    grid-template-areas: 
+    'header header'
+    'sidebar main'
+    'footer footer';
+
+}
+
+.box {
+    border: solid black 2px;
+}
+
+.imagen-principal{
+    height: 100%;
+}
