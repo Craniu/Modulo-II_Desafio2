@@ -91,14 +91,12 @@ sidebar a {
 main {
     grid-area: main;
     padding: 0px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
 }
 
 .tarjeta {
-    flex: 1 1 24%;
-    height: 30%;
     background-color: black;
     padding: 10px 5px 25px 5px;
     border-radius: 8px;
@@ -142,4 +140,5 @@ footer {
     text-align: center;
     justify-content: center;
     padding: 5px;
+    margin-top: 10px;
 }
