@@ -1,53 +1,145 @@
+.grid-container {
+    padding: 5px;
+    background-color: black;
+    display: grid;
+    height: 100hv;
+    grid-template-columns: 20% 1fr;
+    grid-template-areas:
+        'header header'
+        'sidebar main'
+        'footer footer';
 
+}
+
+
+/* Header */
 header {
     grid-area: header;
     height: 75px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    color: aliceblue;
+    background-color: rgba(4, 0, 255, 0.1);
+    margin-bottom: 10px;
 }
-header ul{
-    border: solid red 1px;
+
+header ul {
     display: flex;
-}
-header li{
-    margin: 0px 20px ;
-
+    list-style: none;
+    height: 100%;
 }
 
+header li {
+
+    align-content: center;
+    text-align: center;
+    width: 100px;
+}
+
+header li:hover {
+    background-color: rgba(255, 0, 0, 0.158);
+}
+
+header li:active {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.imagen-principal {
+    height: 100%;
+}
+
+/* Fin header */
+
+
+/* Sidebar */
 sidebar {
     grid-area: sidebar;
     height: 90vh;
 }
 
+sidebar ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+sidebar li {
+    padding: 20px;
+    border: solid rgba(125, 125, 125, 0.3) 0.1px;
+
+}
+
+sidebar li:hover {
+    background-color: rgba(125, 125, 125, 0.4);
+}
+
+sidebar li:active {
+    background-color: rgba(125, 125, 125, 0.1);
+}
+
+sidebar a {
+    text-decoration: none;
+    color: rgb(192, 189, 22);
+}
+
+/* Fin Sidebar */
+
+
+/* Main */
 main {
     grid-area: main;
-    height: 90vh;
+    padding: 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
+
+.tarjeta {
+    flex: 1 1 24%;
+    height: 30%;
+    background-color: black;
+    padding: 10px 5px 25px 5px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: aliceblue;
+    text-align: center;
+    border: solid rgba(165, 22, 231, 0.4) 1px;
+}
+
+.foto-tarjeta {
+    width: 90%;
+    height: 70%;
+    border-radius: 8%;
+}
+
+.btn-comprar {
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.btn-comprar:hover {
+    background-color: #04aa6daf;
+}
+.btn-comprar:active {
+    background-color: #04aa6d5b;
+}
+
+/* Fin Main */
 
 footer {
     grid-area: footer;
+    background-color: rgb(14, 14, 14);
     height: 30px;
-}
-
-
-
-.grid-container {
-    display: grid;
-    height: 100hv;
-    grid-template-columns: 20% 1fr;
-    grid-template-areas: 
-    'header header'
-    'sidebar main'
-    'footer footer';
-
-}
-
-.box {
-    border: solid black 2px;
-}
-
-.imagen-principal{
-    height: 100%;
+    color: aliceblue;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
 }
